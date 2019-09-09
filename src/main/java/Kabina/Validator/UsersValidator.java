@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import Kabina.Model.Users;
+import Kabina.Model.User;
 
 @Component
 public class UsersValidator implements Validator {
@@ -12,13 +12,13 @@ public class UsersValidator implements Validator {
 	@Override
 	public boolean supports(Class<?> clazz) {
 		// TODO Auto-generated method stub
-		return Users.class.equals(clazz);
+		return User.class.equals(clazz);
 	}
 
 	public void validate(Object target, Errors errors) {
 		// TODO Auto-generated method stub
-		Users user = (Users) target;
-		if (!user.getUserName().matches("^[a-zA-Z0-9]{8,15}")) {
+		User user = (User) target;
+		if (!user.getUsername().matches("^[a-zA-Z0-9]{8,15}")) {
 			errors.rejectValue("userName", "not accept Special letter");
 		}
 //		if (!user.getPassword().matches("^\\w{6,20}$")) {

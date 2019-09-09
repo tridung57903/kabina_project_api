@@ -1,7 +1,11 @@
 package Kabina.Service;
 
-import Kabina.Model.Users;
+import Kabina.Model.User;
 
 public interface UserService {
-	Iterable<Users> findAll();
+	Iterable<User> findAll();
+	public User addUser(User usr);
+	public User updateUser(User usr);
+	public void deleteUser (Long Id);
+	int checkUserExist(String userName);
 }

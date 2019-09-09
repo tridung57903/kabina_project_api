@@ -11,8 +11,8 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import Kabina.Model.Users;
-import Kabina.Repository.UsersRepository;
+import Kabina.Model.User;
+import Kabina.Repository.UserRepository;
 import Kabina.Service.impl.UserServiceImpl;
 
 @RunWith(SpringRunner.class)
@@ -23,9 +23,9 @@ public class UsersTest {
 	private static final boolean ISACTIVE = true;
 	private static final boolean ISADMIN = true;
 	@Mock
-	UsersRepository repository;
+	UserRepository repository;
 	@Mock
-	Users u;
+	User u;
 
 	@InjectMocks
 	UserServiceImpl service;
