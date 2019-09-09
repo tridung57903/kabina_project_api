@@ -153,4 +153,12 @@ public class User extends AuditModel {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
+	public BusinessUnit getBusinessUnit() {
+		return businessUnit;
+	}
+
+	public void setBusinessUnit(BusinessUnit businessUnit) {
+		this.businessUnit = businessUnit;
+	}
 }
