@@ -13,14 +13,12 @@ public class SecurityUser implements UserDetails{
     private String username;
     private String password;
     private String role;
-    private long businessId;
 
-    public SecurityUser(long id, String username, String password, String role, long businessId){
+    public SecurityUser(long id, String username, String password, String role){
     	this.id = id;
         this.username = username;
         this.password = password;
         this.role = role;
-        this.businessId = businessId;
     }
 
 	public void setUsername(String username) {
@@ -41,14 +39,6 @@ public class SecurityUser implements UserDetails{
 
 	public void setId(long id) {
 		this.id = id;
-	}
-	
-	public long getBusinessId() {
-		return businessId;
-	}
-
-	public void setBusinessId(long businessId) {
-		this.businessId = businessId;
 	}
 
 	@Override

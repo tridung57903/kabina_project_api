@@ -9,13 +9,11 @@ public class JwtResponse implements Serializable {
 	private final String jwttoken;
 	private String role;
 	private long id;
-	private long businessId;
 
-	public JwtResponse(String jwttoken, String role, long id, long businessId) {
+	public JwtResponse(String jwttoken, String role, long id) {
 		this.jwttoken = jwttoken;
 		this.role = role;
 		this.id = id;
-		this.businessId = businessId;
 	}
 
 	public long getId() {
@@ -36,13 +34,5 @@ public class JwtResponse implements Serializable {
 
 	public void setRole(String role) {
 		this.role = role;
-	}
-	
-	public long getBusinessId() {
-		return businessId;
-	}
-
-	public void setBusinessId(long businessId) {
-		this.businessId = businessId;
 	}
 }

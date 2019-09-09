@@ -29,7 +29,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 		if (user == null) {
 			throw new UsernameNotFoundException("User not found with username: " + username);
 		}
-		return new SecurityUser(user.getId(),user.getUsername(), user.getPassword(), user.getRole(),user.getBusinessUnit().getId());
+		return new SecurityUser(user.getId(),user.getUsername(), user.getPassword(), user.getRole());
 	}
 	
 	public boolean save(UserDTO user){ 
